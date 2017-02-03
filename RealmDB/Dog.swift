@@ -1,5 +1,5 @@
 //
-//  Person.swift
+//  Dog.swift
 //  RealmDB
 //
 //  Created by Atnlie on 2/2/17.
@@ -9,9 +9,8 @@
 import Foundation
 import RealmSwift
 
-class Person : Object{
+class Dog : Object{
     dynamic var name = ""
     dynamic var age = 0
-    dynamic var sex = ""
-    let dog = List<Dog>()
+    dynamic var owner : Person!
 }

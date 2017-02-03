@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        realmVersioning()
         return true
     }
 
@@ -41,6 +43,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    //MARK: Realm versioning
+    func realmVersioning(){
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: { migration, oldSchemaVersion in
+                switch oldSchemaVersion{
+                case 1:
+                    migration.enumerateObjects(ofType: Person.className()) { oldObject, newObject in
+                        newObject!["dog"] = List<Dog>()
+                    }
+//                case 2:
+//                    migration.enumerateObjects(ofType: Dog.className()) { oldObject, newObject in
+//                        newObject!["age"] = 0
+//                    }
+                default:
+                    break
+                }
+        })
+        _ = try! Realm()
+        //delate all table
+//        try! Realm().write {
+//            try! Realm().deleteAll()
+//        }
+    }
 
 }
 

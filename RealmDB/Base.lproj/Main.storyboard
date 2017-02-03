@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Show Dog View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RealmDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ShowDogViewController" customModule="RealmDB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -36,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1U1-Nd-VH2" id="3rC-VV-koM">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -54,12 +54,18 @@
                             <constraint firstItem="Btk-n0-el0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="YbM-0H-PjX"/>
                             <constraint firstItem="Btk-n0-el0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="csZ-uL-P44"/>
                             <constraint firstItem="wcs-7J-bdB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fa9-Da-0Rb"/>
-                            <constraint firstItem="wcs-7J-bdB" firstAttribute="top" secondItem="Btk-n0-el0" secondAttribute="bottom" constant="17" id="hfd-9t-8oe"/>
+                            <constraint firstItem="wcs-7J-bdB" firstAttribute="top" secondItem="Btk-n0-el0" secondAttribute="bottom" constant="10" id="hfd-9t-8oe"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wcs-7J-bdB" secondAttribute="bottom" constant="20" id="s4K-OA-qj7"/>
                             <constraint firstItem="wcs-7J-bdB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="w6Y-Hz-vAP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7bA-DC-KGi"/>
+                    <navigationItem key="navigationItem" id="7bA-DC-KGi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nN3-Bz-n9C">
+                            <connections>
+                                <segue destination="BRY-gc-jju" kind="show" identifier="addDog" id="atC-rI-98T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchName" destination="Btk-n0-el0" id="7sb-ot-E9D"/>
                         <outlet property="tableView" destination="wcs-7J-bdB" id="vZd-wS-tG3"/>
@@ -67,7 +73,108 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.2" y="137.18140929535232"/>
+            <point key="canvasLocation" x="670" y="136"/>
+        </scene>
+        <!--Add Dogs-->
+        <scene sceneID="9fZ-hV-ivb">
+            <objects>
+                <viewController title="Add Dogs" id="BRY-gc-jju" customClass="AddDogViewController" customModule="RealmDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ugZ-cW-2VT"/>
+                        <viewControllerLayoutGuide type="bottom" id="20g-mh-OZZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8e5-fD-K0P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1B-jX-L0T">
+                                <rect key="frame" x="16" y="144" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GkP-AD-3vl">
+                                <rect key="frame" x="16" y="182" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Owner" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aeq-pf-tMJ">
+                                <rect key="frame" x="16" y="220" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="R96-2w-6Xv"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVn-pZ-v1T">
+                                <rect key="frame" x="309" y="258" width="50" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Zhs-d6-8X7"/>
+                                    <constraint firstAttribute="height" constant="30" id="lMQ-5L-91c"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton_Clicked:" destination="BRY-gc-jju" eventType="touchUpInside" id="CcL-Ne-5Ye"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdC-Gp-7cQ">
+                                <rect key="frame" x="210" y="258" width="91" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="GvM-nv-olU"/>
+                                    <constraint firstAttribute="height" constant="30" id="bBJ-H7-EZp"/>
+                                </constraints>
+                                <state key="normal" title="Save &amp; Back"/>
+                                <connections>
+                                    <action selector="saveAndBackButton_Clicked:" destination="BRY-gc-jju" eventType="touchUpInside" id="DG4-AS-dLI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQB-pu-Gli">
+                                <rect key="frame" x="111" y="258" width="91" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Cie-uB-BPH"/>
+                                    <constraint firstAttribute="width" constant="91" id="kBX-Rt-AsJ"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButton_Clicked:" destination="BRY-gc-jju" eventType="touchUpInside" id="b1t-nM-Rve"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pVn-pZ-v1T" firstAttribute="top" secondItem="Aeq-pf-tMJ" secondAttribute="bottom" constant="8" id="0w8-aO-w2z"/>
+                            <constraint firstItem="GkP-AD-3vl" firstAttribute="leading" secondItem="8e5-fD-K0P" secondAttribute="leadingMargin" id="50I-Fn-CM0"/>
+                            <constraint firstItem="c1B-jX-L0T" firstAttribute="top" secondItem="ugZ-cW-2VT" secondAttribute="bottom" constant="80" id="8WK-8I-jKF"/>
+                            <constraint firstItem="GkP-AD-3vl" firstAttribute="trailing" secondItem="8e5-fD-K0P" secondAttribute="trailingMargin" id="BVr-zT-Yhh"/>
+                            <constraint firstItem="pVn-pZ-v1T" firstAttribute="leading" secondItem="WdC-Gp-7cQ" secondAttribute="trailing" constant="8" id="OKa-GT-Qwz"/>
+                            <constraint firstItem="WdC-Gp-7cQ" firstAttribute="leading" secondItem="uQB-pu-Gli" secondAttribute="trailing" constant="8" id="QMp-Nt-A1S"/>
+                            <constraint firstItem="Aeq-pf-tMJ" firstAttribute="top" secondItem="GkP-AD-3vl" secondAttribute="bottom" constant="8" id="Sce-YQ-Qy3"/>
+                            <constraint firstItem="Aeq-pf-tMJ" firstAttribute="leading" secondItem="8e5-fD-K0P" secondAttribute="leadingMargin" id="X6e-eE-1OV"/>
+                            <constraint firstItem="c1B-jX-L0T" firstAttribute="leading" secondItem="8e5-fD-K0P" secondAttribute="leadingMargin" id="a61-R2-Cbu"/>
+                            <constraint firstItem="pVn-pZ-v1T" firstAttribute="trailing" secondItem="8e5-fD-K0P" secondAttribute="trailingMargin" id="bbb-Kb-yRs"/>
+                            <constraint firstItem="Aeq-pf-tMJ" firstAttribute="trailing" secondItem="8e5-fD-K0P" secondAttribute="trailingMargin" id="boc-mY-7a8"/>
+                            <constraint firstItem="c1B-jX-L0T" firstAttribute="trailing" secondItem="8e5-fD-K0P" secondAttribute="trailingMargin" id="izK-uC-27x"/>
+                            <constraint firstItem="uQB-pu-Gli" firstAttribute="top" secondItem="Aeq-pf-tMJ" secondAttribute="bottom" constant="8" id="jD6-hD-p8o"/>
+                            <constraint firstItem="GkP-AD-3vl" firstAttribute="top" secondItem="c1B-jX-L0T" secondAttribute="bottom" constant="8" id="jdf-aS-EW5"/>
+                            <constraint firstItem="WdC-Gp-7cQ" firstAttribute="top" secondItem="Aeq-pf-tMJ" secondAttribute="bottom" constant="8" id="l24-TM-Ja7"/>
+                            <constraint firstItem="WdC-Gp-7cQ" firstAttribute="top" secondItem="Aeq-pf-tMJ" secondAttribute="bottom" constant="8" id="rXI-IE-nI9"/>
+                            <constraint firstItem="pVn-pZ-v1T" firstAttribute="leading" secondItem="WdC-Gp-7cQ" secondAttribute="trailing" constant="8" id="tt8-OC-xlm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dogAge" destination="GkP-AD-3vl" id="qCT-rJ-2iy"/>
+                        <outlet property="dogName" destination="c1B-jX-L0T" id="2ln-rL-G3c"/>
+                        <outlet property="dogOwner" destination="Aeq-pf-tMJ" id="Fe5-Oc-ear"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cF-pj-ccf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="-303"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W4C-9Z-mNr">
@@ -85,7 +192,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZq-FX-HcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="791.15442278860576"/>
+            <point key="canvasLocation" x="-42" y="137"/>
         </scene>
     </scenes>
 </document>
