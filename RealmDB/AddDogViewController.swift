@@ -45,7 +45,7 @@ class AddDogViewController: UIViewController {
     }
     
     @IBAction func saveAndBackButton_Clicked(_ sender:UIButton){
-        if (self.dogName.text?.characters.count)! <= 0 {
+        if (self.dogName.text?.characters.count)! < 3 {
             self.alert(message: "Please input Name",title: "Warning")
         }else if (self.dogAge.text?.characters.count)! <= 0{
             self.alert(message: "Please input Age",title: "Warning")

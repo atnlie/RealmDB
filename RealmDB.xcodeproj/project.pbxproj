@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B0A4DDC1E44A31500BE6FA3 /* AddDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A4DDB1E44A31500BE6FA3 /* AddDogViewController.swift */; };
-		5B0A4DDF1E44C3F100BE6FA3 /* DogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A4DDE1E44C3F100BE6FA3 /* DogViewModel.swift */; };
+		5B0A4DDF1E44C3F100BE6FA3 /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A4DDE1E44C3F100BE6FA3 /* DogModel.swift */; };
 		5B0A4DE21E44C5BD00BE6FA3 /* structDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A4DE11E44C5BD00BE6FA3 /* structDog.swift */; };
 		5B0A4DE41E44CD8F00BE6FA3 /* ManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A4DE31E44CD8F00BE6FA3 /* ManagerExtension.swift */; };
 		5B0A4DE81E44D97300BE6FA3 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A4DE71E44D97300BE6FA3 /* AddPersonViewController.swift */; };
@@ -19,12 +19,15 @@
 		5B3C608F1E42ED35001F85C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3C608D1E42ED35001F85C8 /* LaunchScreen.storyboard */; };
 		5B3C60981E42F707001F85C8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3C60971E42F707001F85C8 /* Person.swift */; };
 		5B3C609C1E436A04001F85C8 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3C609B1E436A04001F85C8 /* Dog.swift */; };
+		5B54C4411E48BAD800092CB6 /* ShowPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54C4401E48BAD800092CB6 /* ShowPersonViewController.swift */; };
+		5BD80C721E4824C800B728CC /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD80C711E4824C800B728CC /* PersonModel.swift */; };
+		5BD80C741E48292B00B728CC /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD80C731E48292B00B728CC /* PersonViewModel.swift */; };
 		DB5021F63399BEDBC2C64690 /* Pods_RealmDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FC7541C631CA3D374C0747 /* Pods_RealmDB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B0A4DDB1E44A31500BE6FA3 /* AddDogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDogViewController.swift; sourceTree = "<group>"; };
-		5B0A4DDE1E44C3F100BE6FA3 /* DogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogViewModel.swift; sourceTree = "<group>"; };
+		5B0A4DDE1E44C3F100BE6FA3 /* DogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogModel.swift; sourceTree = "<group>"; };
 		5B0A4DE11E44C5BD00BE6FA3 /* structDog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = structDog.swift; sourceTree = "<group>"; };
 		5B0A4DE31E44CD8F00BE6FA3 /* ManagerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerExtension.swift; sourceTree = "<group>"; };
 		5B0A4DE71E44D97300BE6FA3 /* AddPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +40,9 @@
 		5B3C60901E42ED35001F85C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B3C60971E42F707001F85C8 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = RealmModel/Person.swift; sourceTree = "<group>"; };
 		5B3C609B1E436A04001F85C8 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		5B54C4401E48BAD800092CB6 /* ShowPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPersonViewController.swift; sourceTree = "<group>"; };
+		5BD80C711E4824C800B728CC /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		5BD80C731E48292B00B728CC /* PersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 		66FC7541C631CA3D374C0747 /* Pods_RealmDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4AF968A2673EF7C979B557 /* Pods-RealmDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmDB/Pods-RealmDB.release.xcconfig"; sourceTree = "<group>"; };
 		9DB1A5AF3915BF1AFE4550AF /* Pods-RealmDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmDB/Pods-RealmDB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,18 +85,21 @@
 			children = (
 				5B3C60881E42ED35001F85C8 /* Main.storyboard */,
 				5B3C60861E42ED35001F85C8 /* ShowDogViewController.swift */,
+				5B54C4401E48BAD800092CB6 /* ShowPersonViewController.swift */,
 				5B0A4DDB1E44A31500BE6FA3 /* AddDogViewController.swift */,
 				5B0A4DE71E44D97300BE6FA3 /* AddPersonViewController.swift */,
 			);
 			name = "UI View";
 			sourceTree = "<group>";
 		};
-		5B0A4DDD1E44A4BB00BE6FA3 /* ViewModel */ = {
+		5B0A4DDD1E44A4BB00BE6FA3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5B0A4DDE1E44C3F100BE6FA3 /* DogViewModel.swift */,
+				5B0A4DDE1E44C3F100BE6FA3 /* DogModel.swift */,
+				5BD80C711E4824C800B728CC /* PersonModel.swift */,
+				5BD80C731E48292B00B728CC /* PersonViewModel.swift */,
 			);
-			name = ViewModel;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		5B0A4DE01E44C5A400BE6FA3 /* Struct */ = {
@@ -123,21 +132,21 @@
 			isa = PBXGroup;
 			children = (
 				5B0A4DE01E44C5A400BE6FA3 /* Struct */,
-				5B0A4DDD1E44A4BB00BE6FA3 /* ViewModel */,
+				5B0A4DDD1E44A4BB00BE6FA3 /* Model */,
 				5B0A4DD91E449A7000BE6FA3 /* UI View */,
 				5B0A4DD81E449A4F00BE6FA3 /* Support Files */,
-				5B3C60961E42F6D7001F85C8 /* Model */,
+				5B3C60961E42F6D7001F85C8 /* RealmModel */,
 			);
 			path = RealmDB;
 			sourceTree = "<group>";
 		};
-		5B3C60961E42F6D7001F85C8 /* Model */ = {
+		5B3C60961E42F6D7001F85C8 /* RealmModel */ = {
 			isa = PBXGroup;
 			children = (
 				5B3C60971E42F707001F85C8 /* Person.swift */,
 				5B3C609B1E436A04001F85C8 /* Dog.swift */,
 			);
-			name = Model;
+			name = RealmModel;
 			sourceTree = "<group>";
 		};
 		8D1B8CB4783764DF66AA3CA6 /* Pods */ = {
@@ -272,12 +281,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B54C4411E48BAD800092CB6 /* ShowPersonViewController.swift in Sources */,
 				5B3C60981E42F707001F85C8 /* Person.swift in Sources */,
 				5B3C60871E42ED35001F85C8 /* ShowDogViewController.swift in Sources */,
+				5BD80C721E4824C800B728CC /* PersonModel.swift in Sources */,
+				5BD80C741E48292B00B728CC /* PersonViewModel.swift in Sources */,
 				5B0A4DE81E44D97300BE6FA3 /* AddPersonViewController.swift in Sources */,
 				5B3C609C1E436A04001F85C8 /* Dog.swift in Sources */,
 				5B0A4DE41E44CD8F00BE6FA3 /* ManagerExtension.swift in Sources */,
-				5B0A4DDF1E44C3F100BE6FA3 /* DogViewModel.swift in Sources */,
+				5B0A4DDF1E44C3F100BE6FA3 /* DogModel.swift in Sources */,
 				5B0A4DE21E44C5BD00BE6FA3 /* structDog.swift in Sources */,
 				5B0A4DDC1E44A31500BE6FA3 /* AddDogViewController.swift in Sources */,
 				5B3C60851E42ED35001F85C8 /* AppDelegate.swift in Sources */,

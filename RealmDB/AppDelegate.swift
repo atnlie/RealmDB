@@ -53,19 +53,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     migration.enumerateObjects(ofType: Person.className()) { oldObject, newObject in
                         newObject!["dog"] = List<Dog>()
                     }
-//                case 2:
-//                    migration.enumerateObjects(ofType: Dog.className()) { oldObject, newObject in
-//                        newObject!["age"] = 0
-//                    }
                 default:
                     break
                 }
         })
         _ = try! Realm()
-        //delate all table
-//        try! Realm().write {
-//            try! Realm().deleteAll()
-//        }
     }
 
 }

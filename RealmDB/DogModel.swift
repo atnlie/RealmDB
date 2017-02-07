@@ -1,5 +1,5 @@
 //
-//  DogViewModel.swift
+//  DogModel.swift
 //  RealmDB
 //
 //  Created by Atnlie on 2/3/17.
@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class DogViewModel : NSObject{
+class DogModel : NSObject{
     init(newDog : Dog) {
         let realm = try! Realm()
         try! realm.write {

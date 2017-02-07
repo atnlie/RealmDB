@@ -19,8 +19,6 @@ class ShowDogViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         searchName.delegate = self
         print(try! Realm().configuration.fileURL!)
-        //checkRealmTable()
-        //add_dog()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -32,17 +30,7 @@ class ShowDogViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: - navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addDog" {
-            print("dog")
-        }else{
-            print("yang lain")
-        }
-    }
-    
     //MARK: - tables
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = dog[indexPath.row].name
@@ -52,15 +40,6 @@ class ShowDogViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dog.count
-    }
-    
-    //MARK: realm
-    func checkRealmTable(){
-        let realm = try! Realm()
-        print(realm.configuration.fileURL!)
-        if realm.objects(Person.self).count <= 0 {
-            //add_person()
-        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
